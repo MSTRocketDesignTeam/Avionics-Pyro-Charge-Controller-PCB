@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 2
+Sheet 2 3
 Title ""
 Date "2021-10-05"
 Rev "v1.0.3"
@@ -283,103 +283,13 @@ Text Notes 5200 2950 0    100  ~ 0
 Microcontroller Chip
 Wire Notes Line
 	9000 5350 9000 3000
-$Comp
-L Device:R R?
-U 1 1 616146AE
-P 5700 4600
-AR Path="/616146AE" Ref="R?"  Part="1" 
-AR Path="/6160DF75/616146AE" Ref="R?"  Part="1" 
-F 0 "R?" H 5770 4646 50  0000 L CNN
-F 1 "1k5Ω" H 5770 4555 50  0000 L CNN
-F 2 "" V 5630 4600 50  0001 C CNN
-F 3 "~" H 5700 4600 50  0001 C CNN
-	1    5700 4600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 616146B4
-P 5700 4750
-AR Path="/616146B4" Ref="#PWR?"  Part="1" 
-AR Path="/6160DF75/616146B4" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 5700 4500 50  0001 C CNN
-F 1 "GND" H 5705 4577 50  0000 C CNN
-F 2 "" H 5700 4750 50  0001 C CNN
-F 3 "" H 5700 4750 50  0001 C CNN
-	1    5700 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:LED D?
-U 1 1 616146BA
-P 5700 4200
-AR Path="/616146BA" Ref="D?"  Part="1" 
-AR Path="/6160DF75/616146BA" Ref="D?"  Part="1" 
-F 0 "D?" V 5739 4082 50  0000 R CNN
-F 1 "GREEN" V 5648 4082 50  0000 R CNN
-F 2 "" H 5700 4200 50  0001 C CNN
-F 3 "~" H 5700 4200 50  0001 C CNN
-	1    5700 4200
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:LED D?
-U 1 1 616146C0
-P 5350 4200
-AR Path="/616146C0" Ref="D?"  Part="1" 
-AR Path="/6160DF75/616146C0" Ref="D?"  Part="1" 
-F 0 "D?" V 5389 4082 50  0000 R CNN
-F 1 "RED" V 5298 4082 50  0000 R CNN
-F 2 "" H 5350 4200 50  0001 C CNN
-F 3 "~" H 5350 4200 50  0001 C CNN
-	1    5350 4200
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 616146C6
-P 5350 4600
-AR Path="/616146C6" Ref="R?"  Part="1" 
-AR Path="/6160DF75/616146C6" Ref="R?"  Part="1" 
-F 0 "R?" H 5420 4646 50  0000 L CNN
-F 1 "1k5Ω" H 5420 4555 50  0000 L CNN
-F 2 "" V 5280 4600 50  0001 C CNN
-F 3 "~" H 5350 4600 50  0001 C CNN
-	1    5350 4600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 616146CC
-P 5350 4750
-AR Path="/616146CC" Ref="#PWR?"  Part="1" 
-AR Path="/6160DF75/616146CC" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 5350 4500 50  0001 C CNN
-F 1 "GND" H 5355 4577 50  0000 C CNN
-F 2 "" H 5350 4750 50  0001 C CNN
-F 3 "" H 5350 4750 50  0001 C CNN
-	1    5350 4750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5350 4450 5350 4350
-Wire Wire Line
-	5700 4450 5700 4350
-Wire Wire Line
-	5350 4050 5350 3800
-Wire Wire Line
-	5350 3800 6350 3800
-Wire Wire Line
-	6350 3900 5700 3900
-Wire Wire Line
-	5700 3900 5700 4050
 Wire Notes Line
 	5200 3000 5200 5350
 Wire Notes Line
 	5200 5350 9000 5350
 Wire Notes Line
 	5200 3000 9000 3000
-Text HLabel 6350 4000 0    50   Input ~ 0
+Text HLabel 6350 3800 0    50   Input ~ 0
 Sense_A
 Text HLabel 7350 4100 2    50   Input ~ 0
 SWCLK
@@ -391,16 +301,20 @@ Text HLabel 7350 4400 2    50   Input ~ 0
 I2C1_SCL
 Text HLabel 6350 4700 0    50   Input ~ 0
 NRST
-Text HLabel 6350 4100 0    50   Input ~ 0
+Text HLabel 6350 3900 0    50   Input ~ 0
 Sense_B
 Text HLabel 6350 4200 0    50   Input ~ 0
-Fet_A
-Text HLabel 6350 4300 0    50   Input ~ 0
-Fet_B
-Text HLabel 6350 4400 0    50   Input ~ 0
 Fire_A
-Text HLabel 6350 4500 0    50   Input ~ 0
+Text HLabel 6350 4300 0    50   Input ~ 0
 Fire_B
 Text HLabel 7350 4000 2    50   Input ~ 0
 Buzzer_Excitation
+Text HLabel 6350 4000 0    50   Input ~ 0
+Sense_C
+Text HLabel 6350 4100 0    50   Input ~ 0
+Sense_D
+Text HLabel 6350 4400 0    50   Input ~ 0
+Fire_C
+Text HLabel 6350 4500 0    50   Input ~ 0
+Fire_D
 $EndSCHEMATC
