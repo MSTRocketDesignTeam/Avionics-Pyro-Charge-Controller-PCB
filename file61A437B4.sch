@@ -108,37 +108,9 @@ Text HLabel 5250 2500 0    50   Input ~ 0
 SWCLK
 Text HLabel 5250 2600 0    50   Input ~ 0
 NRST
-$Comp
-L Device:C_Small C?
-U 1 1 61A55586
-P 5050 2700
-AR Path="/61A55586" Ref="C?"  Part="1" 
-AR Path="/61A437B5/61A55586" Ref="C1"  Part="1" 
-F 0 "C1" H 5142 2746 50  0000 L CNN
-F 1 "100nF" H 5142 2655 50  0000 L CNN
-F 2 "" H 5050 2700 50  0001 C CNN
-F 3 "~" H 5050 2700 50  0001 C CNN
-	1    5050 2700
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5150 2700 5250 2700
-$Comp
-L power:GND #PWR?
-U 1 1 61A5558D
-P 4950 2700
-AR Path="/61A5558D" Ref="#PWR?"  Part="1" 
-AR Path="/61A437B5/61A5558D" Ref="#PWR0141"  Part="1" 
-F 0 "#PWR0141" H 4950 2450 50  0001 C CNN
-F 1 "GND" H 4955 2527 50  0000 C CNN
-F 2 "" H 4950 2700 50  0001 C CNN
-F 3 "" H 4950 2700 50  0001 C CNN
-	1    4950 2700
-	0    1    1    0   
-$EndComp
-Text HLabel 5250 2800 0    50   Input ~ 0
+Text HLabel 5250 2700 0    50   Input ~ 0
 Fire
-Text HLabel 5250 2900 0    50   Input ~ 0
+Text HLabel 5250 2800 0    50   Input ~ 0
 Fire_redundant
 NoConn ~ 5250 3600
 NoConn ~ 5250 3500
@@ -159,4 +131,32 @@ NoConn ~ 5250 4700
 NoConn ~ 5250 4600
 NoConn ~ 5250 4500
 NoConn ~ 5250 4400
+$Comp
+L power:GND #PWR?
+U 1 1 61A5558D
+P 4650 2600
+AR Path="/61A5558D" Ref="#PWR?"  Part="1" 
+AR Path="/61A437B5/61A5558D" Ref="#PWR0141"  Part="1" 
+F 0 "#PWR0141" H 4650 2350 50  0001 C CNN
+F 1 "GND" H 4655 2427 50  0000 C CNN
+F 2 "" H 4650 2600 50  0001 C CNN
+F 3 "" H 4650 2600 50  0001 C CNN
+	1    4650 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 61A55586
+P 4750 2600
+AR Path="/61A55586" Ref="C?"  Part="1" 
+AR Path="/61A437B5/61A55586" Ref="C1"  Part="1" 
+F 0 "C1" H 4842 2646 50  0000 L CNN
+F 1 "100nF" H 4842 2555 50  0000 L CNN
+F 2 "" H 4750 2600 50  0001 C CNN
+F 3 "~" H 4750 2600 50  0001 C CNN
+	1    4750 2600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4850 2600 5250 2600
 $EndSCHEMATC
