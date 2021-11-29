@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 4
+Sheet 4 4
 Title ""
 Date "2021-10-05"
 Rev "v1.0.3"
@@ -14,303 +14,295 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L power:GND #PWR?
-U 1 1 6161462F
-P 6850 5100
-AR Path="/6161462F" Ref="#PWR?"  Part="1" 
-AR Path="/6160DF75/6161462F" Ref="#PWR0128"  Part="1" 
-F 0 "#PWR0128" H 6850 4850 50  0001 C CNN
-F 1 "GND" H 6855 4927 50  0000 C CNN
-F 2 "" H 6850 5100 50  0001 C CNN
-F 3 "" H 6850 5100 50  0001 C CNN
-	1    6850 5100
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR?
-U 1 1 6161463B
-P 7300 3300
-AR Path="/6161463B" Ref="#PWR?"  Part="1" 
-AR Path="/6160DF75/6161463B" Ref="#PWR0129"  Part="1" 
-F 0 "#PWR0129" H 7300 3150 50  0001 C CNN
-F 1 "+3.3V" H 7315 3473 50  0000 C CNN
-F 2 "" H 7300 3300 50  0001 C CNN
-F 3 "" H 7300 3300 50  0001 C CNN
-	1    7300 3300
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:Crystal Y?
 U 1 1 61614642
-P 8250 4150
+P 5500 6400
 AR Path="/61614642" Ref="Y?"  Part="1" 
 AR Path="/6160DF75/61614642" Ref="Y1"  Part="1" 
-F 0 "Y1" H 8250 4418 50  0000 C CNN
-F 1 "Crystal" H 8250 4327 50  0000 C CNN
-F 2 "" H 8250 4150 50  0001 C CNN
-F 3 "~" H 8250 4150 50  0001 C CNN
-	1    8250 4150
-	1    0    0    -1  
+F 0 "Y1" V 5550 6650 50  0000 C CNN
+F 1 "Crystal" V 5450 6650 50  0000 C CNN
+F 2 "" H 5500 6400 50  0001 C CNN
+F 3 "~" H 5500 6400 50  0001 C CNN
+	1    5500 6400
+	0    1    1    0   
 $EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 61614648
-P 8550 4400
+P 5250 6700
 AR Path="/61614648" Ref="C?"  Part="1" 
 AR Path="/6160DF75/61614648" Ref="C10"  Part="1" 
-F 0 "C10" H 8458 4354 50  0000 R CNN
-F 1 "30pF" H 8458 4445 50  0000 R CNN
-F 2 "" H 8550 4400 50  0001 C CNN
-F 3 "~" H 8550 4400 50  0001 C CNN
-	1    8550 4400
-	-1   0    0    1   
+F 0 "C10" V 5000 6750 50  0000 R CNN
+F 1 "30pF" V 5100 6800 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5250 6700 50  0001 C CNN
+F 3 "~" H 5250 6700 50  0001 C CNN
+	1    5250 6700
+	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 6161464E
-P 7950 4400
+P 5250 6100
 AR Path="/6161464E" Ref="C?"  Part="1" 
 AR Path="/6160DF75/6161464E" Ref="C9"  Part="1" 
-F 0 "C9" H 7858 4354 50  0000 R CNN
-F 1 "30pF" H 7858 4445 50  0000 R CNN
-F 2 "" H 7950 4400 50  0001 C CNN
-F 3 "~" H 7950 4400 50  0001 C CNN
-	1    7950 4400
-	-1   0    0    1   
+F 0 "C9" V 5000 6150 50  0000 R CNN
+F 1 "30pF" V 5100 6200 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5250 6100 50  0001 C CNN
+F 3 "~" H 5250 6100 50  0001 C CNN
+	1    5250 6100
+	0    -1   -1   0   
 $EndComp
-Text Notes 7850 5100 0    50   ~ 0
+Text Notes 4950 7400 0    50   ~ 0
 CL = 2 * (Cload - Cstray)\nCload ≈ 20pF, Cstray ≈ 5pF\nCL = 2 *(20pF - 5pF)\nCL = 30pF
 $Comp
 L power:GND #PWR?
 U 1 1 61614655
-P 7950 4500
+P 5050 6100
 AR Path="/61614655" Ref="#PWR?"  Part="1" 
-AR Path="/6160DF75/61614655" Ref="#PWR0130"  Part="1" 
-F 0 "#PWR0130" H 7950 4250 50  0001 C CNN
-F 1 "GND" H 7955 4327 50  0000 C CNN
-F 2 "" H 7950 4500 50  0001 C CNN
-F 3 "" H 7950 4500 50  0001 C CNN
-	1    7950 4500
+AR Path="/6160DF75/61614655" Ref="#PWR037"  Part="1" 
+F 0 "#PWR037" H 5050 5850 50  0001 C CNN
+F 1 "GND" H 5055 5927 50  0000 C CNN
+F 2 "" H 5050 6100 50  0001 C CNN
+F 3 "" H 5050 6100 50  0001 C CNN
+	1    5050 6100
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 6161465B
-P 8550 4500
+P 5050 6700
 AR Path="/6161465B" Ref="#PWR?"  Part="1" 
-AR Path="/6160DF75/6161465B" Ref="#PWR0131"  Part="1" 
-F 0 "#PWR0131" H 8550 4250 50  0001 C CNN
-F 1 "GND" H 8555 4327 50  0000 C CNN
-F 2 "" H 8550 4500 50  0001 C CNN
-F 3 "" H 8550 4500 50  0001 C CNN
-	1    8550 4500
+AR Path="/6160DF75/6161465B" Ref="#PWR038"  Part="1" 
+F 0 "#PWR038" H 5050 6450 50  0001 C CNN
+F 1 "GND" H 5055 6527 50  0000 C CNN
+F 2 "" H 5050 6700 50  0001 C CNN
+F 3 "" H 5050 6700 50  0001 C CNN
+	1    5050 6700
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 61614661
-P 6000 4750
+P 4450 1000
 AR Path="/61614661" Ref="#PWR?"  Part="1" 
-AR Path="/6160DF75/61614661" Ref="#PWR0132"  Part="1" 
-F 0 "#PWR0132" H 6000 4500 50  0001 C CNN
-F 1 "GND" H 6005 4577 50  0000 C CNN
-F 2 "" H 6000 4750 50  0001 C CNN
-F 3 "" H 6000 4750 50  0001 C CNN
-	1    6000 4750
+AR Path="/6160DF75/61614661" Ref="#PWR034"  Part="1" 
+F 0 "#PWR034" H 4450 750 50  0001 C CNN
+F 1 "GND" H 4455 827 50  0000 C CNN
+F 2 "" H 4450 1000 50  0001 C CNN
+F 3 "" H 4450 1000 50  0001 C CNN
+	1    4450 1000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6000 4750 6000 4600
+	4450 1000 4450 850 
 Wire Wire Line
-	6000 4600 6350 4600
+	5850 5500 5850 6700
 Wire Wire Line
-	7350 3800 8550 3800
+	5750 5500 5750 6100
 Wire Wire Line
-	7350 3900 7950 3900
+	5750 6100 5500 6100
 Wire Wire Line
-	7950 3900 7950 4150
+	5850 6700 5500 6700
 Wire Wire Line
-	8550 3800 8550 4150
+	5500 6250 5500 6100
+Connection ~ 5500 6100
 Wire Wire Line
-	8100 4150 7950 4150
-Connection ~ 7950 4150
+	5500 6100 5350 6100
 Wire Wire Line
-	7950 4150 7950 4300
+	5500 6550 5500 6700
+Connection ~ 5500 6700
 Wire Wire Line
-	8400 4150 8550 4150
-Connection ~ 8550 4150
-Wire Wire Line
-	8550 4150 8550 4300
+	5500 6700 5350 6700
 $Comp
 L Device:C_Small C?
 U 1 1 61614678
-P 3500 4350
+P 1250 3750
 AR Path="/61614678" Ref="C?"  Part="1" 
 AR Path="/6160DF75/61614678" Ref="C6"  Part="1" 
-F 0 "C6" H 3408 4304 50  0000 R CNN
-F 1 "1uF" H 3408 4395 50  0000 R CNN
-F 2 "" H 3500 4350 50  0001 C CNN
-F 3 "~" H 3500 4350 50  0001 C CNN
-	1    3500 4350
+F 0 "C6" H 1158 3704 50  0000 R CNN
+F 1 "1uF" H 1158 3795 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1250 3750 50  0001 C CNN
+F 3 "~" H 1250 3750 50  0001 C CNN
+	1    1250 3750
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 6161467E
-P 3900 4350
+P 1650 3750
 AR Path="/6161467E" Ref="C?"  Part="1" 
 AR Path="/6160DF75/6161467E" Ref="C7"  Part="1" 
-F 0 "C7" H 3808 4304 50  0000 R CNN
-F 1 "100nF" H 3808 4395 50  0000 R CNN
-F 2 "" H 3900 4350 50  0001 C CNN
-F 3 "~" H 3900 4350 50  0001 C CNN
-	1    3900 4350
+F 0 "C7" H 1558 3704 50  0000 R CNN
+F 1 "100nF" H 1558 3795 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1650 3750 50  0001 C CNN
+F 3 "~" H 1650 3750 50  0001 C CNN
+	1    1650 3750
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 61614684
-P 4300 4350
+P 2050 3750
 AR Path="/61614684" Ref="C?"  Part="1" 
 AR Path="/6160DF75/61614684" Ref="C8"  Part="1" 
-F 0 "C8" H 4208 4304 50  0000 R CNN
-F 1 "100nF" H 4208 4395 50  0000 R CNN
-F 2 "" H 4300 4350 50  0001 C CNN
-F 3 "~" H 4300 4350 50  0001 C CNN
-	1    4300 4350
+F 0 "C8" H 1958 3704 50  0000 R CNN
+F 1 "100nF" H 1958 3795 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2050 3750 50  0001 C CNN
+F 3 "~" H 2050 3750 50  0001 C CNN
+	1    2050 3750
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 6161468A
-P 3500 4600
+P 1250 4000
 AR Path="/6161468A" Ref="#PWR?"  Part="1" 
-AR Path="/6160DF75/6161468A" Ref="#PWR0133"  Part="1" 
-F 0 "#PWR0133" H 3500 4350 50  0001 C CNN
-F 1 "GND" H 3505 4427 50  0000 C CNN
-F 2 "" H 3500 4600 50  0001 C CNN
-F 3 "" H 3500 4600 50  0001 C CNN
-	1    3500 4600
+AR Path="/6160DF75/6161468A" Ref="#PWR033"  Part="1" 
+F 0 "#PWR033" H 1250 3750 50  0001 C CNN
+F 1 "GND" H 1255 3827 50  0000 C CNN
+F 2 "" H 1250 4000 50  0001 C CNN
+F 3 "" H 1250 4000 50  0001 C CNN
+	1    1250 4000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3500 4600 3500 4550
+	1250 4000 1250 3950
 Wire Wire Line
-	3500 4550 3900 4550
+	1250 3950 1650 3950
 Wire Wire Line
-	4300 4550 4300 4450
-Connection ~ 3500 4550
+	2050 3950 2050 3850
+Connection ~ 1250 3950
 Wire Wire Line
-	3500 4550 3500 4450
+	1250 3950 1250 3850
 Wire Wire Line
-	3900 4450 3900 4550
-Connection ~ 3900 4550
+	1650 3850 1650 3950
+Connection ~ 1650 3950
 Wire Wire Line
-	3900 4550 4300 4550
+	1650 3950 2050 3950
 $Comp
 L power:+3.3V #PWR?
 U 1 1 61614698
-P 3500 4100
+P 1250 3500
 AR Path="/61614698" Ref="#PWR?"  Part="1" 
-AR Path="/6160DF75/61614698" Ref="#PWR0134"  Part="1" 
-F 0 "#PWR0134" H 3500 3950 50  0001 C CNN
-F 1 "+3.3V" H 3515 4273 50  0000 C CNN
-F 2 "" H 3500 4100 50  0001 C CNN
-F 3 "" H 3500 4100 50  0001 C CNN
-	1    3500 4100
+AR Path="/6160DF75/61614698" Ref="#PWR032"  Part="1" 
+F 0 "#PWR032" H 1250 3350 50  0001 C CNN
+F 1 "+3.3V" H 1265 3673 50  0000 C CNN
+F 2 "" H 1250 3500 50  0001 C CNN
+F 3 "" H 1250 3500 50  0001 C CNN
+	1    1250 3500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3500 4100 3500 4150
+	1250 3500 1250 3550
 Wire Wire Line
-	3500 4150 3900 4150
+	1250 3550 1650 3550
 Wire Wire Line
-	3900 4150 3900 4250
-Connection ~ 3500 4150
+	1650 3550 1650 3650
+Connection ~ 1250 3550
 Wire Wire Line
-	3500 4150 3500 4250
+	1250 3550 1250 3650
 Wire Wire Line
-	3900 4150 4300 4150
+	1650 3550 2050 3550
 Wire Wire Line
-	4300 4150 4300 4250
-Connection ~ 3900 4150
-Text Notes 3450 5050 0    50   ~ 0
+	2050 3550 2050 3650
+Connection ~ 1650 3550
+Text Notes 1200 4450 0    50   ~ 0
 1uF - Bulk Filtering\n100nF - 1 per VCC pin
 Wire Notes Line
-	3350 4850 4650 4850
+	1100 4250 2400 4250
 Wire Notes Line
-	4650 4850 4650 3850
+	2400 4250 2400 3250
 Wire Notes Line
-	4650 3850 3350 3850
+	2400 3250 1100 3250
 Wire Notes Line
-	3350 3850 3350 4850
-Text Notes 3350 3800 0    100  ~ 0
-Microcontroller\nInput Power Filtering
-Text Notes 5200 2950 0    100  ~ 0
-Microcontroller Chip
-Wire Notes Line
-	9000 5350 9000 3000
-Wire Notes Line
-	5200 3000 5200 5350
-Wire Notes Line
-	5200 5350 9000 5350
-Wire Notes Line
-	5200 3000 9000 3000
-Text HLabel 6350 3800 0    50   Input ~ 0
-Sense_A
-Text HLabel 7350 4100 2    50   Input ~ 0
+	1100 3250 1100 4250
+Text HLabel 6250 1300 1    50   Input ~ 0
 SWCLK
-Text HLabel 7350 4200 2    50   Input ~ 0
+Text HLabel 6350 1300 1    50   Input ~ 0
 SWDIO
-Text HLabel 7350 4400 2    50   Input ~ 0
+Text HLabel 6150 1300 1    50   Input ~ 0
 I2C1_SCL
-Text HLabel 6350 4700 0    50   Input ~ 0
+Text HLabel 3650 3500 0    50   Input ~ 0
 NRST
-Text HLabel 6350 3900 0    50   Input ~ 0
+Text HLabel 6650 3600 2    50   Input ~ 0
 Sense_B
-Text HLabel 6350 4200 0    50   Input ~ 0
+Text HLabel 6650 3700 2    50   Input ~ 0
 Fire_A
-Text HLabel 6350 4300 0    50   Input ~ 0
+Text HLabel 6650 3800 2    50   Input ~ 0
 Fire_B
-Text HLabel 7350 4000 2    50   Input ~ 0
-Buzzer_Excitation
-Text HLabel 6350 4000 0    50   Input ~ 0
+Text HLabel 6650 4300 2    50   Input ~ 0
 Sense_C
-Text HLabel 6350 4100 0    50   Input ~ 0
+Text HLabel 6650 4000 2    50   Input ~ 0
 Sense_D
-Text HLabel 6350 4400 0    50   Input ~ 0
+Text HLabel 6650 4100 2    50   Input ~ 0
 Fire_C
-Text HLabel 6350 4500 0    50   Input ~ 0
+Text HLabel 6650 4200 2    50   Input ~ 0
 Fire_D
+Text HLabel 6050 1300 1    50   Input ~ 0
+I2C1_SDA
 $Comp
-L dk_Embedded-Microcontrollers:STM32F030F4P6 U?
-U 1 1 61614629
-P 6750 3900
-AR Path="/61614629" Ref="U?"  Part="1" 
-AR Path="/6160DF75/61614629" Ref="U1"  Part="1" 
-F 0 "U1" H 6800 4750 60  0000 C CNN
-F 1 "STM32F030F4P6" H 6800 4650 60  0000 C CNN
-F 2 "digikey-footprints:TSSOP-20_W4.4mm" H 6950 4100 60  0001 L CNN
-F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/a4/5d/0b/0e/87/c4/4d/71/DM00088500.pdf/files/DM00088500.pdf/jcr:content/translations/en.DM00088500.pdf" H 6950 4200 60  0001 L CNN
-F 4 "497-14044-5-ND" H 6950 4300 60  0001 L CNN "Digi-Key_PN"
-F 5 "STM32F030F4P6" H 6950 4400 60  0001 L CNN "MPN"
-F 6 "Integrated Circuits (ICs)" H 6950 4500 60  0001 L CNN "Category"
-F 7 "Embedded - Microcontrollers" H 6950 4600 60  0001 L CNN "Family"
-F 8 "http://www.st.com/content/ccc/resource/technical/document/datasheet/a4/5d/0b/0e/87/c4/4d/71/DM00088500.pdf/files/DM00088500.pdf/jcr:content/translations/en.DM00088500.pdf" H 6950 4700 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/stmicroelectronics/STM32F030F4P6/497-14044-5-ND/4357517" H 6950 4800 60  0001 L CNN "DK_Detail_Page"
-F 10 "Microcontroller" H 6450 4550 60  0000 L CNN "Description"
-F 11 "STMicroelectronics" H 6950 5000 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 6950 5100 60  0001 L CNN "Status"
-	1    6750 3900
+L SamacSys_Parts:STM32L562VET6Q IC1
+U 1 1 61A3157F
+P 3650 2200
+F 0 "IC1" H 5200 3650 50  0000 L CNN
+F 1 "STM32L562VET6Q" H 4950 3500 50  0000 L CNN
+F 2 "SamacSys_Parts:QFP50P1600X1600X160-100N" H 6500 2900 50  0001 L CNN
+F 3 "https://www.st.com/resource/en/datasheet/stm32l562ve.pdf" H 6500 2800 50  0001 L CNN
+F 4 "32-bit Microcontrollers - MCU 16/32-BITS MICROS" H 6500 2700 50  0001 L CNN "Description"
+F 5 "1.6" H 6500 2600 50  0001 L CNN "Height"
+F 6 "511-STM32L562VET6Q" H 6500 2500 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/STM32L562VET6Q?qs=%252B6g0mu59x7LmzZ%252BsHmyBKw%3D%3D" H 6500 2400 50  0001 L CNN "Mouser Price/Stock"
+F 8 "STMicroelectronics" H 6500 2300 50  0001 L CNN "Manufacturer_Name"
+F 9 "STM32L562VET6Q" H 6500 2200 50  0001 L CNN "Manufacturer_Part_Number"
+	1    3650 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6161462F
+P 6650 2300
+AR Path="/6161462F" Ref="#PWR?"  Part="1" 
+AR Path="/6160DF75/6161462F" Ref="#PWR035"  Part="1" 
+F 0 "#PWR035" H 6650 2050 50  0001 C CNN
+F 1 "GND" H 6655 2127 50  0000 C CNN
+F 2 "" H 6650 2300 50  0001 C CNN
+F 3 "" H 6650 2300 50  0001 C CNN
+	1    6650 2300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6650 2200 7050 2200
+Wire Wire Line
+	4550 1300 4550 850 
+Wire Wire Line
+	4550 850  4450 850 
+Text Notes 1100 3200 0    100  ~ 0
+Microcontroller\nInput Power Filtering
+Text HLabel 3650 3600 0    50   Input ~ 0
+Fire
+Text HLabel 3650 3700 0    50   Input ~ 0
+Fire_Redundant
+Text HLabel 4450 5500 3    50   Input ~ 0
+Buzzer_Excitation
+Text HLabel 5950 1300 1    50   Input ~ 0
+Alert_Active
+$Comp
+L power:+3.3V #PWR?
+U 1 1 6161463B
+P 7050 2200
+AR Path="/6161463B" Ref="#PWR?"  Part="1" 
+AR Path="/6160DF75/6161463B" Ref="#PWR036"  Part="1" 
+F 0 "#PWR036" H 7050 2050 50  0001 C CNN
+F 1 "+3.3V" H 7050 2350 50  0000 C CNN
+F 2 "" H 7050 2200 50  0001 C CNN
+F 3 "" H 7050 2200 50  0001 C CNN
+	1    7050 2200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6750 3400 6850 3400
-Text HLabel 7350 4300 2    50   Input ~ 0
-I2C1_SDA
+	5150 6100 5050 6100
 Wire Wire Line
-	6850 3400 7300 3400
-Wire Wire Line
-	7300 3300 7300 3400
-Connection ~ 6850 3400
+	5150 6700 5050 6700
+Text HLabel 6650 3900 2    50   Input ~ 0
+Sense_A
 $EndSCHEMATC
