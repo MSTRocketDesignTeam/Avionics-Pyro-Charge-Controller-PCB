@@ -194,7 +194,7 @@ F 4 " " V 7134 4018 60  0000 L CNN "Field4"
 	1    7050 3950
 	0    1    1    0   
 $EndComp
-Text Label 10700 3750 0    50   ~ 0
+Text Label 10650 2900 0    50   ~ 0
 Fet_C
 $Comp
 L SparkFun-Resistors:RESISTOR0402 R6
@@ -212,19 +212,19 @@ Wire Wire Line
 	6750 3750 6650 3750
 Wire Wire Line
 	10450 3950 10700 3950
-Text Label 10700 3950 0    50   ~ 0
+Text Label 10650 3100 0    50   ~ 0
 Sense_C
 Text Label 6400 3750 2    50   ~ 0
 Fire_D
 Connection ~ 10450 3950
 Text Label 6400 3000 2    50   ~ 0
 Fire_C
-Text Label 10650 3100 0    50   ~ 0
+Text Label 10700 3950 0    50   ~ 0
 Sense_D
 Connection ~ 10450 3100
 Wire Wire Line
 	10450 3100 10650 3100
-Text Label 10650 2900 0    50   ~ 0
+Text Label 10700 3750 0    50   ~ 0
 Fet_D
 $Comp
 L power:GND #PWR015
@@ -420,23 +420,6 @@ Wire Wire Line
 	9250 1250 9250 1350
 Wire Wire Line
 	8150 1850 8150 1950
-$Comp
-L SamacSys_Parts:SI7232DN-T1-GE3 Q1
-U 1 1 61A5982E
-P 8150 1250
-F 0 "Q1" H 8700 1515 50  0000 C CNN
-F 1 "SI7232DN-T1-GE3" H 8700 1424 50  0000 C CNN
-F 2 "SamacSys_Parts:SI7232DNT1GE3" H 9100 1350 50  0001 L CNN
-F 3 "https://www.vishay.com/docs/68986/si7232dn.pdf" H 9100 1250 50  0001 L CNN
-F 4 "Dual N-Channel (D-S)MOSFET 20V Vds 8V Vgs PowerPAK 1212-8 " H 9100 1150 50  0001 L CNN "Description"
-F 5 "1.12" H 9100 1050 50  0001 L CNN "Height"
-F 6 "781-SI7232DN-GE3" H 9100 950 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/Vishay-Semiconductors/SI7232DN-T1-GE3?qs=%252BPu8jn5UVnH5FJ8Jo4EbFw%3D%3D" H 9100 850 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Vishay" H 9100 750 50  0001 L CNN "Manufacturer_Name"
-F 9 "SI7232DN-T1-GE3" H 9100 650 50  0001 L CNN "Manufacturer_Part_Number"
-	1    8150 1250
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+5V #PWR016
 U 1 1 61AEDED1
@@ -870,7 +853,7 @@ Wire Wire Line
 	9700 5600 9850 5600
 Wire Wire Line
 	9850 5800 9700 5800
-Text Label 10650 1700 0    50   ~ 0
+Text Label 10600 850  0    50   ~ 0
 Fet_A
 Text Label 3500 1150 2    50   ~ 0
 Sense_B
@@ -891,22 +874,20 @@ F 4 " " H 6800 1821 60  0000 C CNN "Field4"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6700 1700 6600 1700
-Wire Wire Line
 	10400 1900 10650 1900
-Text Label 10650 1900 0    50   ~ 0
+Text Label 10600 1050 0    50   ~ 0
 Sense_A
 Text Label 6350 1700 2    50   ~ 0
 Fire_B
 Connection ~ 10400 1900
 Text Label 6350 950  2    50   ~ 0
 Fire_A
-Text Label 10600 1050 0    50   ~ 0
+Text Label 10650 1900 0    50   ~ 0
 Sense_B
 Connection ~ 10400 1050
 Wire Wire Line
 	10400 1050 10600 1050
-Text Label 10600 850  0    50   ~ 0
+Text Label 10650 1700 0    50   ~ 0
 Fet_B
 $Comp
 L power:GND #PWR014
@@ -993,18 +974,6 @@ F 4 " " V 10484 2168 60  0000 L CNN "Field4"
 	0    1    1    0   
 $EndComp
 $Comp
-L SparkFun-Resistors:RESISTOR0402 R18
-U 1 1 617B3C91
-P 10200 1900
-F 0 "R18" H 10200 2050 45  0000 C CNN
-F 1 "100k" H 10200 2000 45  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 10200 2050 20  0001 C CNN
-F 3 "" H 10200 1900 60  0001 C CNN
-F 4 " " H 10200 2021 60  0000 C CNN "Field4"
-	1    10200 1900
-	1    0    0    -1  
-$EndComp
-$Comp
 L SparkFun-Resistors:RESISTOR0402 R3
 U 1 1 617957C5
 P 6800 950
@@ -1076,6 +1045,37 @@ F 7 "https://www.mouser.co.uk/ProductDetail/CUI-Devices/TB002-500-04BE?qs=vLWxof
 F 8 "CUI Inc." H 10500 5000 50  0001 L CNN "Manufacturer_Name"
 F 9 "TB002-500-04BE" H 10500 4900 50  0001 L CNN "Manufacturer_Part_Number"
 	1    9850 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L SparkFun-Resistors:RESISTOR0402 R18
+U 1 1 617B3C91
+P 10200 1900
+F 0 "R18" H 10200 2050 45  0000 C CNN
+F 1 "100k" H 10200 2000 45  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 10200 2050 20  0001 C CNN
+F 3 "" H 10200 1900 60  0001 C CNN
+F 4 " " H 10200 2021 60  0000 C CNN "Field4"
+	1    10200 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 1700 6600 1700
+$Comp
+L SamacSys_Parts:SI7232DN-T1-GE3 Q1
+U 1 1 61A5982E
+P 8150 1250
+F 0 "Q1" H 8700 1515 50  0000 C CNN
+F 1 "SI7232DN-T1-GE3" H 8700 1424 50  0000 C CNN
+F 2 "SamacSys_Parts:SI7232DNT1GE3" H 9100 1350 50  0001 L CNN
+F 3 "https://www.vishay.com/docs/68986/si7232dn.pdf" H 9100 1250 50  0001 L CNN
+F 4 "Dual N-Channel (D-S)MOSFET 20V Vds 8V Vgs PowerPAK 1212-8 " H 9100 1150 50  0001 L CNN "Description"
+F 5 "1.12" H 9100 1050 50  0001 L CNN "Height"
+F 6 "781-SI7232DN-GE3" H 9100 950 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Vishay-Semiconductors/SI7232DN-T1-GE3?qs=%252BPu8jn5UVnH5FJ8Jo4EbFw%3D%3D" H 9100 850 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Vishay" H 9100 750 50  0001 L CNN "Manufacturer_Name"
+F 9 "SI7232DN-T1-GE3" H 9100 650 50  0001 L CNN "Manufacturer_Part_Number"
+	1    8150 1250
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

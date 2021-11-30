@@ -13,163 +13,161 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Connector:DB37_Male J3
-U 1 1 61A44CBA
-P 5600 3300
-F 0 "J3" H 5780 3359 50  0000 L CNN
-F 1 "DB37_Male" H 5780 3268 50  0000 L CNN
-F 2 "Connector_Dsub:DSUB-37_Male_Horizontal_P2.77x2.54mm_EdgePinOffset9.40mm" H 5600 3300 50  0001 C CNN
-F 3 " ~" H 5600 3300 50  0001 C CNN
-	1    5600 3300
-	-1   0    0    1   
-$EndComp
-Text HLabel 5900 1800 2    50   Input ~ 0
+Text HLabel 5700 2000 0    50   Input ~ 0
 t_mosi
-Text HLabel 5900 1900 2    50   Input ~ 0
+Text HLabel 6700 2100 2    50   Input ~ 0
 t_miso
-Text HLabel 5900 2000 2    50   Input ~ 0
+Text HLabel 5700 2100 0    50   Input ~ 0
 t_clk
-Text HLabel 5900 2300 2    50   Input ~ 0
+Text HLabel 6700 2300 2    50   Input ~ 0
 Alert_scl
-Text HLabel 5900 2400 2    50   Input ~ 0
+Text HLabel 5700 2300 0    50   Input ~ 0
 Alert_sda
-Text HLabel 5900 2500 2    50   Input ~ 0
+Text HLabel 6700 2400 2    50   Input ~ 0
 Alert_Active
-Text HLabel 5900 2100 2    50   Input ~ 0
+Text HLabel 6700 2200 2    50   Input ~ 0
 SWDIO
-Text HLabel 5900 2200 2    50   Input ~ 0
+Text HLabel 5700 2200 0    50   Input ~ 0
 SWCLK
-Text HLabel 5900 2600 2    50   Input ~ 0
+Text HLabel 5700 2400 0    50   Input ~ 0
 NRST
-Text HLabel 5900 2700 2    50   Input ~ 0
+Text HLabel 6700 2500 2    50   Input ~ 0
 Fire
-Text HLabel 5900 2800 2    50   Input ~ 0
+Text HLabel 5700 2500 0    50   Input ~ 0
 Fire_redundant
-NoConn ~ 5900 3600
-NoConn ~ 5900 3500
-NoConn ~ 5900 3400
-NoConn ~ 5900 3300
-NoConn ~ 5900 3200
-NoConn ~ 5900 3100
-NoConn ~ 5900 3000
-NoConn ~ 5900 3800
-NoConn ~ 5900 3700
-NoConn ~ 5900 3900
-NoConn ~ 5900 4000
-NoConn ~ 5900 4100
-NoConn ~ 5900 4200
-NoConn ~ 5900 4300
-NoConn ~ 5900 4800
-NoConn ~ 5900 4700
-NoConn ~ 5900 4600
-NoConn ~ 5900 4500
-NoConn ~ 5900 4400
 $Comp
 L power:GND #PWR?
 U 1 1 61A5558D
-P 6500 2600
+P 5100 2400
 AR Path="/61A5558D" Ref="#PWR?"  Part="1" 
-AR Path="/61A437B5/61A5558D" Ref="#PWR029"  Part="1" 
-F 0 "#PWR029" H 6500 2350 50  0001 C CNN
-F 1 "GND" H 6505 2427 50  0000 C CNN
-F 2 "" H 6500 2600 50  0001 C CNN
-F 3 "" H 6500 2600 50  0001 C CNN
-	1    6500 2600
-	0    -1   1    0   
+AR Path="/61A437B5/61A5558D" Ref="#PWR023"  Part="1" 
+F 0 "#PWR023" H 5100 2150 50  0001 C CNN
+F 1 "GND" H 5105 2227 50  0000 C CNN
+F 2 "" H 5100 2400 50  0001 C CNN
+F 3 "" H 5100 2400 50  0001 C CNN
+	1    5100 2400
+	0    1    -1   0   
 $EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 61A55586
-P 6400 2600
+P 5200 2400
 AR Path="/61A55586" Ref="C?"  Part="1" 
 AR Path="/61A437B5/61A55586" Ref="C5"  Part="1" 
-F 0 "C5" H 6492 2646 50  0000 L CNN
-F 1 "100nF" H 6492 2555 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 6400 2600 50  0001 C CNN
-F 3 "~" H 6400 2600 50  0001 C CNN
-	1    6400 2600
-	0    -1   1    0   
+F 0 "C5" H 5292 2446 50  0000 L CNN
+F 1 "100nF" H 5292 2355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5200 2400 50  0001 C CNN
+F 3 "~" H 5200 2400 50  0001 C CNN
+	1    5200 2400
+	0    1    -1   0   
 $EndComp
 Wire Wire Line
-	6300 2600 5900 2600
-Wire Wire Line
-	6050 4900 5900 4900
-Wire Wire Line
-	6050 5000 5900 5000
-Wire Wire Line
-	6050 1500 5900 1500
-Wire Wire Line
-	6050 1600 5900 1600
-Wire Wire Line
-	6050 1700 5900 1700
-Wire Wire Line
-	6050 5100 5900 5100
+	5300 2400 5700 2400
 $Comp
-L power:+3.3V #PWR025
+L power:+3.3V #PWR029
 U 1 1 61A4A3FB
-P 6050 1700
-F 0 "#PWR025" H 6050 1550 50  0001 C CNN
-F 1 "+3.3V" V 6065 1828 50  0000 L CNN
-F 2 "" H 6050 1700 50  0001 C CNN
-F 3 "" H 6050 1700 50  0001 C CNN
-	1    6050 1700
+P 6700 2000
+F 0 "#PWR029" H 6700 1850 50  0001 C CNN
+F 1 "+3.3V" V 6715 2128 50  0000 L CNN
+F 2 "" H 6700 2000 50  0001 C CNN
+F 3 "" H 6700 2000 50  0001 C CNN
+	1    6700 2000
 	0    1    -1   0   
 $EndComp
 $Comp
 L power:+5V #PWR024
 U 1 1 61A491E6
-P 6050 1600
-F 0 "#PWR024" H 6050 1450 50  0001 C CNN
-F 1 "+5V" V 6065 1728 50  0000 L CNN
-F 2 "" H 6050 1600 50  0001 C CNN
-F 3 "" H 6050 1600 50  0001 C CNN
-	1    6050 1600
-	0    1    -1   0   
+P 5700 1900
+F 0 "#PWR024" H 5700 1750 50  0001 C CNN
+F 1 "+5V" V 5715 2028 50  0000 L CNN
+F 2 "" H 5700 1900 50  0001 C CNN
+F 3 "" H 5700 1900 50  0001 C CNN
+	1    5700 1900
+	0    -1   1    0   
 $EndComp
 $Comp
-L power:+5V #PWR027
-U 1 1 61A49AB4
-P 6050 5000
-F 0 "#PWR027" H 6050 4850 50  0001 C CNN
-F 1 "+5V" V 6065 5128 50  0000 L CNN
-F 2 "" H 6050 5000 50  0001 C CNN
-F 3 "" H 6050 5000 50  0001 C CNN
-	1    6050 5000
-	0    1    -1   0   
-$EndComp
-$Comp
-L power:+3.3V #PWR026
+L power:+3.3V #PWR030
 U 1 1 61A4AB5D
-P 6050 4900
-F 0 "#PWR026" H 6050 4750 50  0001 C CNN
-F 1 "+3.3V" V 6065 5028 50  0000 L CNN
-F 2 "" H 6050 4900 50  0001 C CNN
-F 3 "" H 6050 4900 50  0001 C CNN
-	1    6050 4900
+P 6700 3600
+F 0 "#PWR030" H 6700 3450 50  0001 C CNN
+F 1 "+3.3V" V 6715 3728 50  0000 L CNN
+F 2 "" H 6700 3600 50  0001 C CNN
+F 3 "" H 6700 3600 50  0001 C CNN
+	1    6700 3600
 	0    1    -1   0   
 $EndComp
-NoConn ~ 5900 2900
+$Comp
+L power:GND #PWR026
+U 1 1 61CFEBAB
+P 6200 1600
+F 0 "#PWR026" H 6200 1350 50  0001 C CNN
+F 1 "GND" V 6200 1500 50  0000 R CNN
+F 2 "" H 6200 1600 50  0001 C CNN
+F 3 "" H 6200 1600 50  0001 C CNN
+	1    6200 1600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L SamacSys_Parts:L717SDC37P1ACH4F J3
+U 1 1 61D5E9EE
+P 6200 1600
+F 0 "J3" V 6019 1600 50  0000 C CNN
+F 1 "L717SDC37P1ACH4F" V 6110 1600 50  0000 C CNN
+F 2 "SamacSys_Parts:L717SDC37P1ACH4F" H 8450 1900 50  0001 L CNN
+F 3 "https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/l717sdxxxp1ach4f.pdf" H 8450 1800 50  0001 L CNN
+F 4 "D-Sub Standard Connectors 37P Sz C Std Density Pin Screwlock 4-40" H 8450 1700 50  0001 L CNN "Description"
+F 5 "12.93" H 8450 1600 50  0001 L CNN "Height"
+F 6 "523-L717SDC37P1ACH4F" H 8450 1500 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Amphenol-Commercial-Products/L717SDC37P1ACH4F?qs=wLKqLMNa9uLzTtnbxoO2Ng%3D%3D" H 8450 1400 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Amphenol" H 8450 1300 50  0001 L CNN "Manufacturer_Name"
+F 9 "L717SDC37P1ACH4F" H 8450 1200 50  0001 L CNN "Manufacturer_Part_Number"
+	1    6200 1600
+	0    1    1    0   
+$EndComp
 $Comp
 L power:GND #PWR028
+U 1 1 61D612F7
+P 6700 1900
+F 0 "#PWR028" H 6700 1650 50  0001 C CNN
+F 1 "GND" V 6700 1800 50  0000 R CNN
+F 2 "" H 6700 1900 50  0001 C CNN
+F 3 "" H 6700 1900 50  0001 C CNN
+	1    6700 1900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR031
 U 1 1 61CFE017
-P 6050 5100
-F 0 "#PWR028" H 6050 4850 50  0001 C CNN
-F 1 "GND" H 6055 4927 50  0000 C CNN
-F 2 "" H 6050 5100 50  0001 C CNN
-F 3 "" H 6050 5100 50  0001 C CNN
-	1    6050 5100
+P 6850 3700
+F 0 "#PWR031" H 6850 3450 50  0001 C CNN
+F 1 "GND" H 6855 3527 50  0000 C CNN
+F 2 "" H 6850 3700 50  0001 C CNN
+F 3 "" H 6850 3700 50  0001 C CNN
+	1    6850 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 3700 6700 3700
+$Comp
+L power:GND #PWR027
+U 1 1 61D6677B
+P 6200 4000
+F 0 "#PWR027" H 6200 3750 50  0001 C CNN
+F 1 "GND" H 6205 3827 50  0000 C CNN
+F 2 "" H 6200 4000 50  0001 C CNN
+F 3 "" H 6200 4000 50  0001 C CNN
+	1    6200 4000
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR023
-U 1 1 61CFEBAB
-P 6050 1500
-F 0 "#PWR023" H 6050 1250 50  0001 C CNN
-F 1 "GND" V 6055 1372 50  0000 R CNN
-F 2 "" H 6050 1500 50  0001 C CNN
-F 3 "" H 6050 1500 50  0001 C CNN
-	1    6050 1500
-	0    -1   -1   0   
+L power:+5V #PWR025
+U 1 1 61A49AB4
+P 5700 3600
+F 0 "#PWR025" H 5700 3450 50  0001 C CNN
+F 1 "+5V" V 5715 3728 50  0000 L CNN
+F 2 "" H 5700 3600 50  0001 C CNN
+F 3 "" H 5700 3600 50  0001 C CNN
+	1    5700 3600
+	0    -1   1    0   
 $EndComp
 $EndSCHEMATC
