@@ -20,8 +20,8 @@ P 5500 6400
 AR Path="/61614642" Ref="Y?"  Part="1" 
 AR Path="/6160DF75/61614642" Ref="Y1"  Part="1" 
 F 0 "Y1" V 5550 6650 50  0000 C CNN
-F 1 "Crystal" V 5450 6650 50  0000 C CNN
-F 2 "" H 5500 6400 50  0001 C CNN
+F 1 "32mhz" V 5450 6650 50  0000 C CNN
+F 2 "Crystal:Crystal_HC49-4H_Vertical" H 5500 6400 50  0001 C CNN
 F 3 "~" H 5500 6400 50  0001 C CNN
 	1    5500 6400
 	0    1    1    0   
