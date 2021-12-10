@@ -237,10 +237,10 @@ Fire_D
 Text HLabel 6050 1300 1    50   Input ~ 0
 I2C1_SDA
 $Comp
-L Charges_KiCAD_Project-rescue:STM32L562VET6Q-SamacSys_Parts IC?
+L Charges_KiCAD_Project-rescue:STM32L562VET6Q-SamacSys_Parts IC2
 U 1 1 61A3157F
 P 3650 2200
-F 0 "IC?" H 5200 3650 50  0000 L CNN
+F 0 "IC2" H 5200 3650 50  0000 L CNN
 F 1 "STM32L562VET6Q" H 4950 3500 50  0000 L CNN
 F 2 "SamacSys_Parts:QFP50P1600X1600X160-100N" H 6500 2900 50  0001 L CNN
 F 3 "https://www.st.com/resource/en/datasheet/stm32l562ve.pdf" H 6500 2800 50  0001 L CNN

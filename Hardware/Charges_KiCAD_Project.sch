@@ -919,8 +919,8 @@ L Charges_KiCAD_Project-rescue:TB002-500-04BE-SamacSys_Parts J1
 U 1 1 61D32EFF
 P 7400 5500
 F 0 "J1" H 8028 5396 50  0000 L CNN
-F 1 "TB002-500-04BE" H 8028 5305 50  0000 L CNN
-F 2 "SamacSys_Parts:TB00250004BE" H 8050 5600 50  0001 L CNN
+F 1 "796684-4" H 8028 5305 50  0000 L CNN
+F 2 "RDT_Custom_Footprints:TB00250004BE" H 8050 5600 50  0001 L CNN
 F 3 "https://componentsearchengine.com/Datasheets/1/TB002-500-04BE.pdf" H 8050 5500 50  0001 L CNN
 F 4 "Fixed Terminal Blocks screw type, 5.00 , horizontal, 4 poles, CUI Blue, slotted screw, PCB mount" H 8050 5400 50  0001 L CNN "Description"
 F 5 "10" H 8050 5300 50  0001 L CNN "Height"
@@ -936,8 +936,8 @@ L Charges_KiCAD_Project-rescue:TB002-500-04BE-SamacSys_Parts J2
 U 1 1 61D35C6A
 P 9850 5500
 F 0 "J2" H 10478 5396 50  0000 L CNN
-F 1 "TB002-500-04BE" H 10478 5305 50  0000 L CNN
-F 2 "SamacSys_Parts:TB00250004BE" H 10500 5600 50  0001 L CNN
+F 1 "796684-4" H 10478 5305 50  0000 L CNN
+F 2 "RDT_Custom_Footprints:TB00250004BE" H 10500 5600 50  0001 L CNN
 F 3 "https://componentsearchengine.com/Datasheets/1/TB002-500-04BE.pdf" H 10500 5500 50  0001 L CNN
 F 4 "Fixed Terminal Blocks screw type, 5.00 , horizontal, 4 poles, CUI Blue, slotted screw, PCB mount" H 10500 5400 50  0001 L CNN "Description"
 F 5 "10" H 10500 5300 50  0001 L CNN "Height"
