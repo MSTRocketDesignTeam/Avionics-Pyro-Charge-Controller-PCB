@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 3 4
 Title "MS5607-02BA Barometer Chip"
 Date "2021-10-01"
 Rev "v1.0.4"
@@ -86,7 +86,7 @@ AR Path="/6160DF75/61B849BE" Ref="C?"  Part="1"
 AR Path="/6199791F/61B849BE" Ref="C6"  Part="1" 
 F 0 "C6" H 6258 3554 50  0000 R CNN
 F 1 "100nF" H 6258 3645 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 6350 3600 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6350 3600 50  0001 C CNN
 F 3 "~" H 6350 3600 50  0001 C CNN
 	1    6350 3600
 	-1   0    0    1   
