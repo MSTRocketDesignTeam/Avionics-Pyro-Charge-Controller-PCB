@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 4
+Sheet 2 4
 Title ""
 Date "2021-10-05"
 Rev "v1.0.3"
@@ -34,7 +34,7 @@ AR Path="/61614648" Ref="C?"  Part="1"
 AR Path="/6160DF75/61614648" Ref="C11"  Part="1" 
 F 0 "C11" V 5000 6750 50  0000 R CNN
 F 1 "30pF" V 5100 6800 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 5250 6700 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 5250 6700 50  0001 C CNN
 F 3 "~" H 5250 6700 50  0001 C CNN
 	1    5250 6700
 	0    -1   -1   0   
@@ -47,7 +47,7 @@ AR Path="/6161464E" Ref="C?"  Part="1"
 AR Path="/6160DF75/6161464E" Ref="C10"  Part="1" 
 F 0 "C10" V 5000 6150 50  0000 R CNN
 F 1 "30pF" V 5100 6200 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 5250 6100 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 5250 6100 50  0001 C CNN
 F 3 "~" H 5250 6100 50  0001 C CNN
 	1    5250 6100
 	0    -1   -1   0   
@@ -121,7 +121,7 @@ AR Path="/61614678" Ref="C?"  Part="1"
 AR Path="/6160DF75/61614678" Ref="C7"  Part="1" 
 F 0 "C7" H 1158 3704 50  0000 R CNN
 F 1 "1uF" H 1158 3795 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 1250 3750 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1250 3750 50  0001 C CNN
 F 3 "~" H 1250 3750 50  0001 C CNN
 	1    1250 3750
 	-1   0    0    1   
@@ -134,7 +134,7 @@ AR Path="/6161467E" Ref="C?"  Part="1"
 AR Path="/6160DF75/6161467E" Ref="C8"  Part="1" 
 F 0 "C8" H 1558 3704 50  0000 R CNN
 F 1 "100nF" H 1558 3795 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 1650 3750 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1650 3750 50  0001 C CNN
 F 3 "~" H 1650 3750 50  0001 C CNN
 	1    1650 3750
 	-1   0    0    1   
@@ -147,7 +147,7 @@ AR Path="/61614684" Ref="C?"  Part="1"
 AR Path="/6160DF75/61614684" Ref="C9"  Part="1" 
 F 0 "C9" H 1958 3704 50  0000 R CNN
 F 1 "100nF" H 1958 3795 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 2050 3750 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2050 3750 50  0001 C CNN
 F 3 "~" H 2050 3750 50  0001 C CNN
 	1    2050 3750
 	-1   0    0    1   
