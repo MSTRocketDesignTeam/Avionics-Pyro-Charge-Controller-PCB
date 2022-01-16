@@ -425,9 +425,6 @@ F 3 "" H 8900 5400 50  0001 C CNN
 	1    8900 5400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8900 5500 8900 5400
-Connection ~ 8900 5500
 $Comp
 L power:GND #PWR02
 U 1 1 619BBC40
@@ -466,8 +463,6 @@ F 3 "" H 1050 3800 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7400 5800 7250 5800
-Wire Wire Line
 	7250 5600 7400 5600
 Text Label 7400 5500 2    50   ~ 0
 Fet_A
@@ -479,12 +474,11 @@ U 1 1 6185ACBF
 P 6850 5900
 F 0 "C2" H 6900 5750 50  0000 R CNN
 F 1 "CP1_Small" H 7050 5800 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Axial_L10.0mm_D4.5mm_P15.00mm_Horizontal" H 6850 5900 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Axial_L18.0mm_D6.5mm_P25.00mm_Horizontal" H 6850 5900 50  0001 C CNN
 F 3 "~" H 6850 5900 50  0001 C CNN
 	1    6850 5900
 	1    0    0    -1  
 $EndComp
-Connection ~ 6850 5800
 Wire Wire Line
 	6850 6000 6850 6250
 Wire Wire Line
@@ -502,25 +496,19 @@ F 3 "" H 7050 5050 50  0001 C CNN
 	1    7050 5050
 	1    0    0    -1  
 $EndComp
-Connection ~ 6850 5500
 $Comp
 L Device:CP1_Small C1
 U 1 1 618582E1
 P 6850 5400
 F 0 "C1" H 6900 5250 50  0000 R CNN
 F 1 "CP1_Small" H 7050 5300 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Axial_L10.0mm_D4.5mm_P15.00mm_Horizontal" H 6850 5400 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Axial_L18.0mm_D6.5mm_P25.00mm_Horizontal" H 6850 5400 50  0001 C CNN
 F 3 "~" H 6850 5400 50  0001 C CNN
 	1    6850 5400
 	1    0    0    1   
 $EndComp
 Wire Wire Line
 	7250 5600 7250 5500
-Wire Wire Line
-	6450 5800 6450 5500
-Wire Wire Line
-	6450 5500 6450 5400
-Connection ~ 6450 5500
 $Comp
 L power:+5V #PWR05
 U 1 1 61AEEE7D
@@ -542,8 +530,6 @@ Text Label 3500 1750 2    50   ~ 0
 Alert_Active
 Wire Wire Line
 	1050 3800 1150 3800
-Wire Wire Line
-	8900 5800 8900 5500
 Text Label 2350 2150 0    50   ~ 0
 Fire_Redundant
 Text Label 2350 2300 0    50   ~ 0
@@ -653,36 +639,11 @@ U 1 1 61951F00
 P 9300 5400
 F 0 "C3" H 9350 5250 50  0000 R CNN
 F 1 "CP1_Small" H 9500 5300 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Axial_L10.0mm_D4.5mm_P15.00mm_Horizontal" H 9300 5400 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Axial_L18.0mm_D6.5mm_P25.00mm_Horizontal" H 9300 5400 50  0001 C CNN
 F 3 "~" H 9300 5400 50  0001 C CNN
 	1    9300 5400
 	1    0    0    1   
 $EndComp
-$Comp
-L Charges_KiCAD_Project-rescue:RESISTOR0402-SparkFun-Resistors R15
-U 1 1 61951EFA
-P 9500 5500
-F 0 "R15" H 9500 5650 45  0000 C CNN
-F 1 "0.25" H 9500 5600 45  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 9500 5650 20  0001 C CNN
-F 3 "" H 9500 5500 60  0001 C CNN
-F 4 " " H 9500 5621 60  0000 C CNN "Field4"
-	1    9500 5500
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Charges_KiCAD_Project-rescue:RESISTOR0402-SparkFun-Resistors R13
-U 1 1 61951EF3
-P 9100 5500
-F 0 "R13" H 9100 5400 45  0000 C CNN
-F 1 "10" H 9100 5350 45  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 9100 5650 20  0001 C CNN
-F 3 "" H 9100 5500 60  0001 C CNN
-F 4 " " H 9100 5621 60  0000 C CNN "Field4"
-	1    9100 5500
-	-1   0    0    -1  
-$EndComp
-Connection ~ 9300 5500
 $Comp
 L power:GND #PWR018
 U 1 1 61951EEB
@@ -700,38 +661,13 @@ Wire Wire Line
 	9300 5050 9500 5050
 Wire Wire Line
 	9300 6000 9300 6250
-Connection ~ 9300 5800
-$Comp
-L Charges_KiCAD_Project-rescue:RESISTOR0402-SparkFun-Resistors R14
-U 1 1 61951EDB
-P 9100 5800
-F 0 "R14" H 9100 5700 45  0000 C CNN
-F 1 "10" H 9100 5650 45  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 9100 5950 20  0001 C CNN
-F 3 "" H 9100 5800 60  0001 C CNN
-F 4 " " H 9100 5921 60  0000 C CNN "Field4"
-	1    9100 5800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Charges_KiCAD_Project-rescue:RESISTOR0402-SparkFun-Resistors R16
-U 1 1 61951ED4
-P 9500 5800
-F 0 "R16" H 9500 5950 45  0000 C CNN
-F 1 "0.25" H 9500 5900 45  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 9500 5950 20  0001 C CNN
-F 3 "" H 9500 5800 60  0001 C CNN
-F 4 " " H 9500 5921 60  0000 C CNN "Field4"
-	1    9500 5800
-	-1   0    0    1   
-$EndComp
 $Comp
 L Device:CP1_Small C4
 U 1 1 61951ECD
 P 9300 5900
 F 0 "C4" H 9350 5750 50  0000 R CNN
 F 1 "CP1_Small" H 9500 5800 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Axial_L10.0mm_D4.5mm_P15.00mm_Horizontal" H 9300 5900 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Axial_L18.0mm_D6.5mm_P25.00mm_Horizontal" H 9300 5900 50  0001 C CNN
 F 3 "~" H 9300 5900 50  0001 C CNN
 	1    9300 5900
 	1    0    0    -1  
@@ -742,8 +678,6 @@ Text Label 9850 5500 2    50   ~ 0
 Fet_C
 Wire Wire Line
 	9700 5600 9850 5600
-Wire Wire Line
-	9850 5800 9700 5800
 Text Label 10600 850  0    50   ~ 0
 Fet_A
 Text Label 3500 1150 2    50   ~ 0
@@ -967,54 +901,6 @@ F 9 "SI7232DN-T1-GE3" H 9100 650 50  0001 L CNN "Manufacturer_Part_Number"
 	1    8150 1250
 	1    0    0    -1  
 $EndComp
-$Comp
-L Charges_KiCAD_Project-rescue:RESISTOR0402-SparkFun-Resistors R2
-U 1 1 61863444
-P 6650 5800
-F 0 "R2" H 6650 5700 45  0000 C CNN
-F 1 "10" H 6650 5650 45  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6650 5950 20  0001 C CNN
-F 3 "" H 6650 5800 60  0001 C CNN
-F 4 " " H 6650 5921 60  0000 C CNN "Field4"
-	1    6650 5800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Charges_KiCAD_Project-rescue:RESISTOR0402-SparkFun-Resistors R1
-U 1 1 61864F70
-P 6650 5500
-F 0 "R1" H 6650 5400 45  0000 C CNN
-F 1 "10" H 6650 5350 45  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6650 5650 20  0001 C CNN
-F 3 "" H 6650 5500 60  0001 C CNN
-F 4 " " H 6650 5621 60  0000 C CNN "Field4"
-	1    6650 5500
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Charges_KiCAD_Project-rescue:RESISTOR0402-SparkFun-Resistors R12
-U 1 1 61862CA7
-P 7050 5800
-F 0 "R12" H 7050 5950 45  0000 C CNN
-F 1 "0.25" H 7050 5900 45  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7050 5950 20  0001 C CNN
-F 3 "" H 7050 5800 60  0001 C CNN
-F 4 " " H 7050 5921 60  0000 C CNN "Field4"
-	1    7050 5800
-	-1   0    0    1   
-$EndComp
-$Comp
-L Charges_KiCAD_Project-rescue:RESISTOR0402-SparkFun-Resistors R11
-U 1 1 61863D89
-P 7050 5500
-F 0 "R11" H 7050 5650 45  0000 C CNN
-F 1 "0.25" H 7050 5600 45  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7050 5650 20  0001 C CNN
-F 3 "" H 7050 5500 60  0001 C CNN
-F 4 " " H 7050 5621 60  0000 C CNN "Field4"
-	1    7050 5500
-	-1   0    0    -1  
-$EndComp
 $Sheet
 S 3500 900  1300 1500
 U 6160DF75
@@ -1066,4 +952,34 @@ F10 "NRST" I L 950 2250 50
 F11 "Fire" I R 2350 2300 50 
 F12 "Fire_redundant" I R 2350 2150 50 
 $EndSheet
+Wire Wire Line
+	6450 5400 6450 5500
+Wire Wire Line
+	6450 5800 6850 5800
+Wire Wire Line
+	6850 5800 7400 5800
+Connection ~ 6850 5800
+Wire Wire Line
+	6450 5500 6850 5500
+Connection ~ 6450 5500
+Wire Wire Line
+	6450 5500 6450 5800
+Wire Wire Line
+	6850 5500 7250 5500
+Connection ~ 6850 5500
+Wire Wire Line
+	8900 5400 8900 5500
+Wire Wire Line
+	9300 5500 8900 5500
+Connection ~ 8900 5500
+Wire Wire Line
+	8900 5500 8900 5800
+Wire Wire Line
+	9300 5500 9700 5500
+Connection ~ 9300 5500
+Wire Wire Line
+	9300 5800 9850 5800
+Wire Wire Line
+	9300 5800 8900 5800
+Connection ~ 9300 5800
 $EndSCHEMATC
