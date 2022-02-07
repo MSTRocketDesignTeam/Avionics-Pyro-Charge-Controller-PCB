@@ -33,9 +33,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": true,
         "pads": {
-          "drill": 3.2,
-          "height": 4.8,
-          "width": 4.8
+          "drill": 0.0,
+          "height": 2.0,
+          "width": 0.635
         },
         "silk_line_width": 0.12,
         "silk_text_italic": false,
@@ -129,6 +129,7 @@
         0.15,
         0.2,
         0.25,
+        0.261112,
         0.29337,
         0.3,
         0.4,
@@ -409,6 +410,27 @@
       },
       {
         "bus_width": 12.0,
+        "clearance": 1.0,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Fire Interrupt",
+        "nets": [
+          "/37 Pin DSUB/Fire",
+          "/37 Pin DSUB/Fire_redundant"
+        ],
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.3,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6.0
+      },
+      {
+        "bus_width": 12.0,
         "clearance": 0.127,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
@@ -464,14 +486,19 @@
       {
         "bus_width": 12.0,
         "clearance": 0.1524,
-        "diff_pair_gap": 0.1524,
+        "diff_pair_gap": 0.2032,
         "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.228854,
+        "diff_pair_width": 0.261112,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "USB_Diff",
-        "nets": [],
+        "nets": [
+          "/MCU L562VET6Q/USB_D+",
+          "/MCU L562VET6Q/USB_D-",
+          "/USB Connector and ESD/USB_CONN_D+",
+          "/USB Connector and ESD/USB_CONN_D-"
+        ],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.228854,
@@ -590,6 +617,10 @@
     [
       "df8f57d9-728d-4c7c-8044-9660a269eaa6",
       "37 Pin DSUB"
+    ],
+    [
+      "a8bb373a-f3b4-4e6f-a20b-1ef72d30697b",
+      "USB Connector and ESD"
     ],
     [
       "e31a5680-510d-4c8b-a1a2-e25dc53ad7a6",
