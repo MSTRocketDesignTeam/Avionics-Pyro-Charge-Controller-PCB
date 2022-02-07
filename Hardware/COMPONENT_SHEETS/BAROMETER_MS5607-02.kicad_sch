@@ -281,15 +281,10 @@
     (uuid dda1e6ca-91ec-4136-b90b-3c54d79454b9)
   )
 
-  (text "Pressure range should be \nsufficientfor ~{} 100,000 feet."
+  (text "Pressure range should be \nsufficient for ~100,000 feet."
     (at 138.43 124.46 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 14094ad2-b562-4efa-8c6f-51d7a3134345)
-  )
-  (text "MS5607-02 I2C Addresses:\nAD0 = 0 -> 0x77\nAD0 = 1 -> 0x76"
-    (at 128.27 118.11 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 78f9c3d3-3556-46f6-9744-05ad54b330f0)
   )
   (text "Barometer Chip" (at 157.48 69.85 180)
     (effects (font (size 2.54 2.54)) (justify right bottom))
@@ -345,7 +340,7 @@
   (symbol (lib_id "power:+3.3V") (at 161.29 80.01 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061ae4a67)
-    (property "Reference" "#PWR0101" (id 0) (at 161.29 83.82 0)
+    (property "Reference" "#PWR013" (id 0) (at 161.29 83.82 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (id 1) (at 161.671 75.6158 0))
@@ -358,10 +353,10 @@
     (pin "1" (uuid 9eacd685-19fc-4714-9d5a-cb390df54aea))
   )
 
-  (symbol (lib_id "Device:C_Small") (at 161.29 91.44 180)
+  (symbol (lib_id "Device:C_Small") (at 161.29 91.44 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061b849be)
-    (property "Reference" "C6" (id 0) (at 163.6268 90.2716 0)
+    (property "Reference" "C5" (id 0) (at 163.6268 90.2716 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100nF" (id 1) (at 163.6268 92.583 0)
@@ -380,7 +375,7 @@
   (symbol (lib_id "power:GND") (at 149.86 105.41 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061c97d78)
-    (property "Reference" "#PWR0102" (id 0) (at 149.86 111.76 0)
+    (property "Reference" "#PWR012" (id 0) (at 149.86 111.76 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 149.987 109.8042 0))
