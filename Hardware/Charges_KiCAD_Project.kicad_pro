@@ -554,8 +554,8 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
-      "vrml": ""
+      "step": "../../../../Downloads/Charges_KiCAD_Project.step",
+      "vrml": "../../../../Downloads/Charges_KiCAD_Project.wrl"
     },
     "page_layout_descr_file": ""
   },
