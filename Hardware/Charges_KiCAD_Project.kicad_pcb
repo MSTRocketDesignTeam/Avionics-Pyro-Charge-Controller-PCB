@@ -11528,7 +11528,7 @@
       (xy 90.015355 54.731213)
       (xy 150.124642 54.771213)
     ) (layer "B.SilkS") (width 0.1) (fill solid) (tstamp 6ec46071-0a8d-478f-8bfa-37a327059bc2))
-  (gr_arc (start 157.015355 135.011213) (mid 155.05266 139.871826) (end 150.265196 142.006755) (layer "B.SilkS") (width 0.12) (tstamp 7616cc10-e5e3-46d4-9969-390c2cc586fd))
+  (gr_arc (start 157.015355 135.011213) (mid 155.05266 139.871827) (end 150.265196 142.006755) (layer "B.SilkS") (width 0.12) (tstamp 7616cc10-e5e3-46d4-9969-390c2cc586fd))
   (gr_poly
     (pts
       (xy 79.978456 135.07132)
@@ -11854,7 +11854,7 @@
   (gr_line (start 89.99 51.75) (end 149.99 51.75) (layer "Edge.Cuts") (width 0.1) (tstamp aa67d99b-33fb-4192-81b2-c906c255c2ed))
   (gr_arc (start 89.99 145) (mid 82.918932 142.071068) (end 79.99 135) (layer "Edge.Cuts") (width 0.05) (tstamp c3a8367e-83cc-4016-b1d1-a746a6085fbe))
   (gr_arc (start 79.99 61.75) (mid 82.918932 54.678932) (end 89.99 51.75) (layer "Edge.Cuts") (width 0.05) (tstamp c701d1bd-2d9c-4cf5-8bd0-725c84f8477f))
-  (gr_circle (center 116.49 98.475) (end 124.49 98.475) (layer "Edge.Cuts") (width 0.05) (fill none) (tstamp cda00d0c-8fb1-48a7-a0cb-98ef94bf80ea))
+  (gr_circle (center 116.5 98.475) (end 124.5 98.475) (layer "Edge.Cuts") (width 0.05) (fill none) (tstamp cda00d0c-8fb1-48a7-a0cb-98ef94bf80ea))
   (gr_text "Thomas Francois\nKXØSTL" (at 119.090001 68.469537 180) (layer "B.SilkS") (tstamp a0fa8234-8777-4a66-8b79-9ecbb37d6605)
     (effects (font (size 2 2) (thickness 0.3)) (justify mirror))
   )
@@ -12048,7 +12048,7 @@
   (target plus (at 79.99 51.725) (size 5) (width 0.05) (layer "Edge.Cuts") (tstamp 56f000bc-00bb-47b4-8435-fb8465e6262e))
   (target plus (at 159.99 51.725) (size 5) (width 0.05) (layer "Edge.Cuts") (tstamp 910b5ddc-f258-46c8-81bf-1d4327317763))
   (target plus (at 168.5 142.98) (size 5) (width 0.05) (layer "Edge.Cuts") (tstamp 9a08a223-d952-40f0-88d2-cc600654f8da))
-  (target plus (at 116.49 98.475) (size 5) (width 0.05) (layer "Edge.Cuts") (tstamp da256891-5f31-43e9-9659-546a3ab12dd1))
+  (target plus (at 116.5 98.475) (size 5) (width 0.05) (layer "Edge.Cuts") (tstamp da256891-5f31-43e9-9659-546a3ab12dd1))
 
   (segment (start 144.4425 66.6825) (end 142.9525 66.6825) (width 0.8) (layer "F.Cu") (net 1) (tstamp 01025dfd-163e-47c4-a30a-44b1d1308019))
   (segment (start 129.35 71.4) (end 129.4 71.4) (width 0.8) (layer "F.Cu") (net 1) (tstamp 027eff81-1cf6-4017-8734-a0fbeaee1110))
