@@ -11528,7 +11528,7 @@
       (xy 90.015355 54.731213)
       (xy 150.124642 54.771213)
     ) (layer "B.SilkS") (width 0.1) (fill solid) (tstamp 6ec46071-0a8d-478f-8bfa-37a327059bc2))
-  (gr_arc (start 157.015355 135.011213) (mid 155.05266 139.871826) (end 150.265196 142.006755) (layer "B.SilkS") (width 0.12) (tstamp 7616cc10-e5e3-46d4-9969-390c2cc586fd))
+  (gr_arc (start 157.015355 135.011213) (mid 155.05266 139.871827) (end 150.265196 142.006755) (layer "B.SilkS") (width 0.12) (tstamp 7616cc10-e5e3-46d4-9969-390c2cc586fd))
   (gr_poly
     (pts
       (xy 79.978456 135.07132)
@@ -11851,7 +11851,6 @@
   (gr_arc (start 106.84 144) (mid 106.547107 144.707107) (end 105.84 145) (layer "Edge.Cuts") (width 0.05) (tstamp 35e4dc33-c125-4911-9c3d-6ab1bc61049d))
   (gr_line (start 79.99 135) (end 79.99 61.75) (layer "Edge.Cuts") (width 0.1) (tstamp 4c784975-b87f-44c1-a0f4-8f162655d486))
   (gr_line (start 105.84 145) (end 89.99 145) (layer "Edge.Cuts") (width 0.1) (tstamp 7f42bdbb-f4ef-42d8-90b6-026114ff52b8))
-  (gr_line (start 149.99 145) (end 116.64 145) (layer "Edge.Cuts") (width 0.1) (tstamp 7f42bdbb-f4ef-42d8-90b6-026114ff52b8))
   (gr_arc (start 149.99 51.75) (mid 157.061068 54.678932) (end 159.99 61.75) (layer "Edge.Cuts") (width 0.05) (tstamp 8a75d637-ebda-4b8f-a678-cdb209b4265a))
   (gr_line (start 159.99 61.75) (end 159.99 135) (layer "Edge.Cuts") (width 0.1) (tstamp a532e5c8-3ec8-4e95-b57a-a713c19c1bae))
   (gr_line (start 89.99 51.75) (end 149.99 51.75) (layer "Edge.Cuts") (width 0.1) (tstamp aa67d99b-33fb-4192-81b2-c906c255c2ed))
@@ -11859,8 +11858,9 @@
   (gr_arc (start 79.99 61.75) (mid 82.918932 54.678932) (end 89.99 51.75) (layer "Edge.Cuts") (width 0.05) (tstamp c701d1bd-2d9c-4cf5-8bd0-725c84f8477f))
   (gr_arc (start 114.640001 141.949999) (mid 115.347107 142.242892) (end 115.64 142.949999) (layer "Edge.Cuts") (width 0.05) (tstamp c895b534-63af-4e85-b120-94fcd97ad399))
   (gr_line (start 114.640001 141.949999) (end 107.84 141.952892) (layer "Edge.Cuts") (width 0.1) (tstamp cae40463-4313-49bd-bca6-6f60af70ac68))
-  (gr_circle (center 116.5 98.475) (end 124.5 98.475) (layer "Edge.Cuts") (width 0.05) (fill none) (tstamp cda00d0c-8fb1-48a7-a0cb-98ef94bf80ea))
+  (gr_circle (center 116.5 98.5) (end 124.5 98.5) (layer "Edge.Cuts") (width 0.05) (fill none) (tstamp cda00d0c-8fb1-48a7-a0cb-98ef94bf80ea))
   (gr_line (start 115.64 142.949999) (end 115.64 143.999999) (layer "Edge.Cuts") (width 0.05) (tstamp e00625b5-6b14-4bf2-8c48-477043a3fa56))
+  (gr_line (start 149.99 145) (end 116.64 145) (layer "Edge.Cuts") (width 0.1) (tstamp e3401cc1-8833-4b9f-9419-4adbb09db133))
   (gr_line (start 106.84 142.952892) (end 106.84 144) (layer "Edge.Cuts") (width 0.05) (tstamp f2a09a98-0dd1-4fb2-99e1-ceefc0d38e29))
   (gr_arc (start 116.64 145) (mid 115.932892 144.707107) (end 115.64 143.999999) (layer "Edge.Cuts") (width 0.05) (tstamp f45a37ac-910c-46d6-870e-e22b5765e041))
   (gr_text "Thomas Francois\nKXØSTL" (at 119.090001 68.469537 180) (layer "B.SilkS") (tstamp a0fa8234-8777-4a66-8b79-9ecbb37d6605)
@@ -12056,7 +12056,7 @@
   (target plus (at 79.99 51.725) (size 5) (width 0.05) (layer "Edge.Cuts") (tstamp 56f000bc-00bb-47b4-8435-fb8465e6262e))
   (target plus (at 159.99 51.725) (size 5) (width 0.05) (layer "Edge.Cuts") (tstamp 910b5ddc-f258-46c8-81bf-1d4327317763))
   (target plus (at 168.5 142.98) (size 5) (width 0.05) (layer "Edge.Cuts") (tstamp 9a08a223-d952-40f0-88d2-cc600654f8da))
-  (target plus (at 116.5 98.475) (size 5) (width 0.05) (layer "Edge.Cuts") (tstamp da256891-5f31-43e9-9659-546a3ab12dd1))
+  (target plus (at 116.5 98.5) (size 5) (width 0.05) (layer "Edge.Cuts") (tstamp da256891-5f31-43e9-9659-546a3ab12dd1))
 
   (segment (start 141.42401 66.68) (end 139.93401 66.68) (width 0.8) (layer "F.Cu") (net 1) (tstamp 01025dfd-163e-47c4-a30a-44b1d1308019))
   (segment (start 126.33151 71.3975) (end 126.38151 71.3975) (width 0.8) (layer "F.Cu") (net 1) (tstamp 027eff81-1cf6-4017-8734-a0fbeaee1110))
