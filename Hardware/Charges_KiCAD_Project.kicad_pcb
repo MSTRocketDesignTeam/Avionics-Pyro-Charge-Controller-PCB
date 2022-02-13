@@ -11844,7 +11844,7 @@
       (xy 80.0319 61.730107)
       (xy 80.0319 61.705106)
     ) (layer "F.SilkS") (width 0.1) (fill solid) (tstamp e6c0d447-8629-4e27-be24-bedba13b79e6))
-  (gr_circle (center 116.49 98.475) (end 125.14 98.475) (layer "F.SilkS") (width 1) (fill none) (tstamp eebd0991-3a10-46c9-b05e-3a5e4b2945d6))
+  (gr_circle (center 116.5 98.5) (end 125.15 98.5) (layer "F.SilkS") (width 1) (fill none) (tstamp eebd0991-3a10-46c9-b05e-3a5e4b2945d6))
   (gr_line (start 125.85 95.45) (end 168.1 95.45) (layer "Dwgs.User") (width 0.15) (tstamp 2518d4ea-25cc-4e57-a0d6-8482034e7318))
   (gr_arc (start 159.99 135) (mid 157.061068 142.071068) (end 149.99 145) (layer "Edge.Cuts") (width 0.05) (tstamp 02ffd90a-9af1-4476-b000-1e386a7a512d))
   (gr_arc (start 106.84 142.952892) (mid 107.132893 142.245785) (end 107.84 141.952892) (layer "Edge.Cuts") (width 0.05) (tstamp 0c0463d7-4e0a-40a5-abe5-0b386f623300))
