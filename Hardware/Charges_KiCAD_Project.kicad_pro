@@ -45,7 +45,7 @@
         "silk_text_upright": true,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.508
+          "min_clearance": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -554,7 +554,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "../../../../Downloads/Charges_KiCAD_Project.step",
+      "step": "../../../../Downloads/Charges_KiCAD_Project_Corrected_Dimensions.step",
       "vrml": "../../../../Downloads/Charges_KiCAD_Project.wrl"
     },
     "page_layout_descr_file": ""
