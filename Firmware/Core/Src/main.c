@@ -25,6 +25,7 @@
 /* USER CODE BEGIN Includes */
 #include <string.h>
 #include <stdio.h>
+#include <stdbool.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -76,7 +77,6 @@ int main(void)
   /* USER CODE BEGIN 1 */
 	  int16_t val;
 	  float temp_c;
-	  HAL_StatusTypeDef i2c;
 	  uint8_t buf[1];
 	  uint8_t validAddr[20];
 	  uint8_t addrIndex = 0;
@@ -108,30 +108,61 @@ int main(void)
   MX_I2C1_Init();
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
-HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
+
+  HAL_StatusTypeDef i2c;
+
+  /*--------MS5607_VARS-------------*/
+  const uint8_t MS5607_ADDR = 0x77 << 1;
+  uint8_t dataBuf[3];
+  uint32_t rawTemp = 0, rawPressure = 0; //will hold raw uncalibrated 24 bit readings
+  uint16_t C1, C2, C3, C4, C5, C6; // calibration data, explained in datasheet
+  /*--------------------------------*/
+
+  /*--------MS5607_INIT-------------*/
+  //continually send reset commands until chip wakes up and successfully acknowledges
+  do {
+	  dataBuf[0] = 0x1E;
+	  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
+  } while (i2c != HAL_OK);
+
+  //read in the factory calibration data stored in PROM
+  dataBuf[0] = 0xA1; //C1 - Pressure Sensitivity
+  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
+  i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2, HAL_MAX_DELAY);
+  C1 = (dataBuf[0] << 8) | (dataBuf[1] << 8);
+
+  dataBuf[0] = 0xA2; //C2 - Pressure Offset
+  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
+  i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2, HAL_MAX_DELAY);
+  C2 = (dataBuf[0] << 8) | (dataBuf[1] << 8);
+
+  dataBuf[0] = 0xA3; //C3 - Temperature Coefficient of Pressure Sensitivity
+  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
+  i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2, HAL_MAX_DELAY);
+  C3 = (dataBuf[0] << 8) | (dataBuf[1] << 8);
+
+
+
+
+  /*--------------------------------*/
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
-
-//i2c scanner in loop section
-
-  int x = 0x77;
-  	  while (1){
-  		  buf[0] = 0x48;
-  		  i2c = HAL_I2C_Master_Transmit(&hi2c1, x, buf[0], 1, HAL_MAX_DELAY);
-
-  		  buf[1]= 0x00;
-  		  i2c = HAL_I2C_Master_Transmit(&hi2c1, x, buf[1], 1, HAL_MAX_DELAY);
-
-  		  i2c = HAL_I2C_Master_Receive(&hi2c1, x, buf[1], 2, HAL_MAX_DELAY);
-  		  val = ((int16_t)buf[1] << 4) | (buf[2] >> 4);
-  	  }
-
-
-      /* USER CODE END WHILE */
+/* USER CODE BEGIN WHILE */
+  while (1)
+  {
+    /* USER CODE END WHILE */
 
       /* USER CODE BEGIN 3 */
+
+	  	  /*--------MS5607_READ-------------*/
+	  	  bool success = true; //if set to false something failed
+	  	  //transmit
+	  	  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, buf, 1, HAL_MAX_DELAY);
+	  	  /*--------------------------------*/
+
     }
 	 /* int x;
 	  for(x=40; x<1000; x=x+1)
