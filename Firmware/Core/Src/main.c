@@ -1,20 +1,20 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2022 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * @file           : main.c
+ * @brief          : Main program body
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2022 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -48,7 +48,6 @@
 
 TIM_HandleTypeDef htim4;
 
-
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -75,11 +74,11 @@ static void MX_TIM4_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	  int16_t val;
-	  float temp_c;
-	  uint8_t buf[1];
-	  uint8_t validAddr[20];
-	  uint8_t addrIndex = 0;
+	int16_t val;
+	float temp_c;
+	uint8_t buf[1];
+	uint8_t validAddr[20];
+	uint8_t addrIndex = 0;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -108,106 +107,123 @@ int main(void)
   MX_I2C1_Init();
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
+	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
 
-  HAL_StatusTypeDef i2c;
+	HAL_StatusTypeDef i2c;
 
-  /*--------MS5607_VARS-------------*/
-  const uint8_t MS5607_ADDR = 0x77 << 1;
-  uint8_t dataBuf[3];
-  uint32_t rawTemp = 0, rawPressure = 0; //will hold raw uncalibrated 24 bit readings
-  uint16_t C1, C2, C3, C4, C5, C6; // calibration data, explained in datasheet
-  int32_t dT, TEMP, P;
-  int64_t OFF, SENS;
-  /*--------------------------------*/
+	/*--------MS5607_VARS-------------*/
+	const uint8_t MS5607_ADDR = 0x77 << 1;
+	uint8_t dataBuf[3];
+	uint32_t rawTemp = 0, rawPressure = 0; //will hold raw uncalibrated 24 bit readings
+	uint16_t C1, C2, C3, C4, C5, C6; // calibration data, explained in datasheet
+	int32_t dT, TEMP, P;
+	int64_t OFF, SENS;
+	/*--------------------------------*/
 
-  /*--------MS5607_INIT-------------*/
-  //continually send reset commands until chip wakes up and successfully acknowledges
-  do {
-	  dataBuf[0] = 0x1E;
-	  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
-  } while (i2c != HAL_OK);
+	/*--------MS5607_INIT-------------*/
+	//continually send reset commands until chip wakes up and successfully acknowledges
+	do {
+		dataBuf[0] = 0x1E;
+		i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1,
+				HAL_MAX_DELAY);
+	} while (i2c != HAL_OK);
 
-  //read in the factory calibration data stored in PROM
-  dataBuf[0] = 0xA1; //C1 - Pressure Sensitivity
-  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
-  i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2, HAL_MAX_DELAY);
-  C1 = (dataBuf[0] << 8) | (dataBuf[1]);
+	//read in the factory calibration data stored in PROM
+	dataBuf[0] = 0xA1; //C1 - Pressure Sensitivity
+	i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1,
+			HAL_MAX_DELAY);
+	i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2,
+			HAL_MAX_DELAY);
+	C1 = (dataBuf[0] << 8) | (dataBuf[1]);
 
-  dataBuf[0] = 0xA2; //C2 - Pressure Offset
-  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
-  i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2, HAL_MAX_DELAY);
-  C2 = (dataBuf[0] << 8) | (dataBuf[1]);
+	dataBuf[0] = 0xA2; //C2 - Pressure Offset
+	i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1,
+			HAL_MAX_DELAY);
+	i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2,
+			HAL_MAX_DELAY);
+	C2 = (dataBuf[0] << 8) | (dataBuf[1]);
 
-  dataBuf[0] = 0xA3; //C3 - Temperature Coefficient of Pressure Sensitivity
-  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
-  i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2, HAL_MAX_DELAY);
-  C3 = (dataBuf[0] << 8) | (dataBuf[1]);
+	dataBuf[0] = 0xA3; //C3 - Temperature Coefficient of Pressure Sensitivity
+	i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1,
+			HAL_MAX_DELAY);
+	i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2,
+			HAL_MAX_DELAY);
+	C3 = (dataBuf[0] << 8) | (dataBuf[1]);
 
-  dataBuf[0] = 0xA4; //C4 - Temperature Coefficient of Pressure Offset
-  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
-  i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2, HAL_MAX_DELAY);
-  C4 = (dataBuf[0] << 8) | (dataBuf[1]);
+	dataBuf[0] = 0xA4; //C4 - Temperature Coefficient of Pressure Offset
+	i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1,
+			HAL_MAX_DELAY);
+	i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2,
+			HAL_MAX_DELAY);
+	C4 = (dataBuf[0] << 8) | (dataBuf[1]);
 
-  dataBuf[0] = 0xA5; //C5 - Reference Temperature
-  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
-  i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2, HAL_MAX_DELAY);
-  C5 = (dataBuf[0] << 8) | (dataBuf[1]);
+	dataBuf[0] = 0xA5; //C5 - Reference Temperature
+	i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1,
+			HAL_MAX_DELAY);
+	i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2,
+			HAL_MAX_DELAY);
+	C5 = (dataBuf[0] << 8) | (dataBuf[1]);
 
-  dataBuf[0] = 0xA6; //C6 - Temperature coefficient of the temperature
-  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
-  i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2, HAL_MAX_DELAY);
-  C6 = (dataBuf[0] << 8) | (dataBuf[1]);
-  /*--------------------------------*/
+	dataBuf[0] = 0xA6; //C6 - Temperature coefficient of the temperature
+	i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1,
+			HAL_MAX_DELAY);
+	i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2,
+			HAL_MAX_DELAY);
+	C6 = (dataBuf[0] << 8) | (dataBuf[1]);
+	/*--------------------------------*/
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
-/* USER CODE BEGIN WHILE */
-  while (1)
-  {
+  /* USER CODE BEGIN WHILE */
+	while (1) {
     /* USER CODE END WHILE */
 
-      /* USER CODE BEGIN 3 */
+    /* USER CODE BEGIN 3 */
 
+		/*--------MS5607_READ-------------*/
+		//start temp reading (0x58), start adc reading (0x00), store data in rawTemp
+		dataBuf[0] = 0x58;
+		i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1,
+				HAL_MAX_DELAY);
+		dataBuf[0] = 0x00;
+		i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1,
+				HAL_MAX_DELAY);
+		i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 3,
+				HAL_MAX_DELAY);
+		rawTemp = (dataBuf[0] << 16) | (dataBuf[1] << 8) | (dataBuf[2]);
 
-	  /*--------MS5607_READ-------------*/
-	  //start temp reading (0x58), start adc reading (0x00), store data in rawTemp
-	  dataBuf[0] = 0x58;
-	  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
-	  dataBuf[0] = 0x00;
-	  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
-	  i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 3, HAL_MAX_DELAY);
-	  rawTemp = (dataBuf[0] << 16) | (dataBuf[1] << 8) | (dataBuf[2]);
+		//start pressure reading (0x48), start adc reading (0x00), store data in rawPressure
+		dataBuf[0] = 0x48;
+		i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1,
+				HAL_MAX_DELAY);
+		dataBuf[0] = 0x00;
+		i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1,
+				HAL_MAX_DELAY);
+		i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 3,
+				HAL_MAX_DELAY);
+		rawPressure = (dataBuf[0] << 16) | (dataBuf[1] << 8) | (dataBuf[2]);
 
-	  //start pressure reading (0x48), start adc reading (0x00), store data in rawPressure
-	  dataBuf[0] = 0x48;
-	  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
-	  dataBuf[0] = 0x00;
-	  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
-	  i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 3, HAL_MAX_DELAY);
-	  rawPressure = (dataBuf[0] << 16) | (dataBuf[1] << 8) | (dataBuf[2]);
+		//calculate the temperature
+		dT = rawTemp - (C5 * 2 ^ 8);
+		TEMP = 2000 + dT * C6 / (2 ^ 23);
 
-	  //calculate the temperature
-	  dT = rawTemp - (C5 * 2^8);
-	  TEMP = 2000 + dT*C6/(2^23);
+		//calculate temperature compensated pressure
+		OFF = C2 * (2 ^ 17) + (C4 * dT) / (2 ^ 6);
+		SENS = C1 * (2 ^ 16) + (C3 * dT) / (2 ^ 7);
+		P = (rawPressure * SENS / (2 ^ 21) - OFF) / (2 ^ 15);
+		/*--------------------------------*/
 
-	  //calculate temperature compensated pressure
-	  OFF = C2*(2^17) + (C4*dT)/(2^6);
-	  SENS = C1*(2^16) + (C3*dT)/(2^7);
-	  P = (rawPressure*SENS/(2^21) - OFF)/(2^15);
-	  /*--------------------------------*/
-
-    }
-	 /* int x;
-	  for(x=40; x<1000; x=x+1)
-	  {
-		  __HAL_TIM_SET_AUTORELOAD(&htim4, x*2);
-		  __HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_1, x);
-		  HAL_Delay(100);
-	  }*/
+	}
+	/* int x;
+	 for(x=40; x<1000; x=x+1)
+	 {
+	 __HAL_TIM_SET_AUTORELOAD(&hTIM4, x*2);
+	 __HAL_TIM_SET_COMPARE(&hTIM4, TIM_CHANNEL_1, x);
+	 HAL_Delay(100);
+	 }*/
   /* USER CODE END 3 */
-
+}
 
 /**
   * @brief System Clock Configuration
@@ -431,11 +447,10 @@ static void MX_GPIO_Init(void)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to report the HAL error return state */
-  __disable_irq();
-  while (1)
-  {
-  }
+		/* User can add his own implementation to report the HAL error return state */
+		__disable_irq();
+		while (1) {
+		}
   /* USER CODE END Error_Handler_Debug */
 }
 
