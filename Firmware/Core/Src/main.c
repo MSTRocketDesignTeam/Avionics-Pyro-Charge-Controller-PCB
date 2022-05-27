@@ -117,6 +117,8 @@ int main(void)
   uint8_t dataBuf[3];
   uint32_t rawTemp = 0, rawPressure = 0; //will hold raw uncalibrated 24 bit readings
   uint16_t C1, C2, C3, C4, C5, C6; // calibration data, explained in datasheet
+  int32_t dT, TEMP, P;
+  int64_t OFF, SENS;
   /*--------------------------------*/
 
   /*--------MS5607_INIT-------------*/
@@ -130,21 +132,32 @@ int main(void)
   dataBuf[0] = 0xA1; //C1 - Pressure Sensitivity
   i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
   i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2, HAL_MAX_DELAY);
-  C1 = (dataBuf[0] << 8) | (dataBuf[1] << 8);
+  C1 = (dataBuf[0] << 8) | (dataBuf[1]);
 
   dataBuf[0] = 0xA2; //C2 - Pressure Offset
   i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
   i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2, HAL_MAX_DELAY);
-  C2 = (dataBuf[0] << 8) | (dataBuf[1] << 8);
+  C2 = (dataBuf[0] << 8) | (dataBuf[1]);
 
   dataBuf[0] = 0xA3; //C3 - Temperature Coefficient of Pressure Sensitivity
   i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
   i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2, HAL_MAX_DELAY);
-  C3 = (dataBuf[0] << 8) | (dataBuf[1] << 8);
+  C3 = (dataBuf[0] << 8) | (dataBuf[1]);
 
+  dataBuf[0] = 0xA4; //C4 - Temperature Coefficient of Pressure Offset
+  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
+  i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2, HAL_MAX_DELAY);
+  C4 = (dataBuf[0] << 8) | (dataBuf[1]);
 
+  dataBuf[0] = 0xA5; //C5 - Reference Temperature
+  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
+  i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2, HAL_MAX_DELAY);
+  C5 = (dataBuf[0] << 8) | (dataBuf[1]);
 
-
+  dataBuf[0] = 0xA6; //C6 - Temperature coefficient of the temperature
+  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
+  i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 2, HAL_MAX_DELAY);
+  C6 = (dataBuf[0] << 8) | (dataBuf[1]);
   /*--------------------------------*/
 
   /* USER CODE END 2 */
@@ -157,11 +170,33 @@ int main(void)
 
       /* USER CODE BEGIN 3 */
 
-	  	  /*--------MS5607_READ-------------*/
-	  	  bool success = true; //if set to false something failed
-	  	  //transmit
-	  	  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, buf, 1, HAL_MAX_DELAY);
-	  	  /*--------------------------------*/
+
+	  /*--------MS5607_READ-------------*/
+	  //start temp reading (0x58), start adc reading (0x00), store data in rawTemp
+	  dataBuf[0] = 0x58;
+	  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
+	  dataBuf[0] = 0x00;
+	  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
+	  i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 3, HAL_MAX_DELAY);
+	  rawTemp = (dataBuf[0] << 16) | (dataBuf[1] << 8) | (dataBuf[2]);
+
+	  //start pressure reading (0x48), start adc reading (0x00), store data in rawPressure
+	  dataBuf[0] = 0x48;
+	  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
+	  dataBuf[0] = 0x00;
+	  i2c = HAL_I2C_Master_Transmit(&hi2c1, MS5607_ADDR, dataBuf, 1, HAL_MAX_DELAY);
+	  i2c = HAL_I2C_Master_Receive(&hi2c1, MS5607_ADDR, dataBuf, 3, HAL_MAX_DELAY);
+	  rawPressure = (dataBuf[0] << 16) | (dataBuf[1] << 8) | (dataBuf[2]);
+
+	  //calculate the temperature
+	  dT = rawTemp - (C5 * 2^8);
+	  TEMP = 2000 + dT*C6/(2^23);
+
+	  //calculate temperature compensated pressure
+	  OFF = C2*(2^17) + (C4*dT)/(2^6);
+	  SENS = C1*(2^16) + (C3*dT)/(2^7);
+	  P = (rawPressure*SENS/(2^21) - OFF)/(2^15);
+	  /*--------------------------------*/
 
     }
 	 /* int x;
