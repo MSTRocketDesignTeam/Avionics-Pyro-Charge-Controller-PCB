@@ -205,12 +205,12 @@ int main(void)
 		rawPressure = (dataBuf[0] << 16) | (dataBuf[1] << 8) | (dataBuf[2]);
 
 		//calculate the temperature
-		dT = rawTemp - (((int32_t)C5) * 2 ^ 8);
-		TEMP = 2000 + dT * ((int32_t)C6) / (2 ^ 23);
+		dT = rawTemp - (((int64_t)C5) * 2 ^ 8);
+		TEMP = 2000 + dT * ((int64_t)C6) / (2 ^ 23);
 
 		//calculate temperature compensated pressure
-		OFF = ((int32_t)C2) * (2 ^ 17) + (((int32_t)C4) * dT) / (2 ^ 6);
-		SENS = ((int32_t)C1) * (2 ^ 16) + (((int32_t)C3) * dT) / (2 ^ 7);
+		OFF = ((int64_t)C2) * (2 ^ 17) + (((int64_t)C4) * dT) / (2 ^ 6);
+		SENS = ((int64_t)C1) * (2 ^ 16) + (((int64_t)C3) * dT) / (2 ^ 7);
 		P = ((rawPressure * SENS) / (2 ^ 21) - OFF) / (2 ^ 15);
 		/*--------------------------------*/
 
